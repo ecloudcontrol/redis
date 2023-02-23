@@ -4,13 +4,13 @@ app:
     notify: appz@ecloudcontrol.com
 build:
     version: 6.2
-    env: DEV
+    env: PROD
     build_file: none
     output_files: output/*.zip
     image_template: redis-6.2
     
 deploy:
-    context: alpha/DEV
+    context: alpha/PROD
     replicas: 1
     type: statefulset
     port:
